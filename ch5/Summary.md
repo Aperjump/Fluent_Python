@@ -44,3 +44,10 @@ Some may be useful in our code:
 `my_tag = {'name':'img', 'title':'Sunset', 'cls':'framed'}`
 `tag(**my_tag)`
 Here comes a tricky part: Prefixing the my_tag dict with `**` passes all its items as separate arguments, which are then bound to the named parameters.
+>Within a function object, the __defaults__ attribute holds a tuple with the default values of positional and keyword arguments. The defaults for keyword-only arguments appear in __kwdefaults__. The names of the arguments, however, are found within the __code__ attribute.
+
+You can test my code in `introspect.py` and `testintrospect.py`.
+**Python3 support function programming better**. `5.18.py` can be only useful in Python3.X.
+
+## 4. Functional Programming packages
+`5.23.py` introdeces a very useful technique. `cc_name = itemgetter(1,0)`. `operator.attrgetter()` combined with `collections.namedtuple` is also a powerful skill.
