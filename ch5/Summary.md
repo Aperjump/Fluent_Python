@@ -77,3 +77,12 @@ Generators are a special class of functions that simplify the task of writing it
       for i in range(N):
         yield i
 Values can be sent into generators by calling its `send(value)` method. Generators also become **coroutines**, a more generalized form of subroutines. Coroutines can be entered, exited, and resumed at many different points.
+
+### itertools
+- `itertools.starmap(func, iter)`---iter as arguments
+- `itertools.filterfalse(predicate, iter)`---return predicate filter false
+- `itertools.takewhile(predicate, iter)`---false, end
+- `itertools.dropwhile(predicate, iter)`---discard True
+- `itertools.combinations(iter, r)`
+- `itertools.permutations(iter, r)`
+- **`itertool.groupby(iter, key = None)`**
