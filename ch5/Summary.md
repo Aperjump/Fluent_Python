@@ -51,3 +51,29 @@ You can test my code in `introspect.py` and `testintrospect.py`.
 
 ## 4. Functional Programming packages
 `5.23.py` introdeces a very useful technique. `cc_name = itemgetter(1,0)`. `operator.attrgetter()` combined with `collections.namedtuple` is also a powerful skill.
+I will upload some other [resources](https://docs.python.org/3/howto/functional.html) related to function programming in Python. By definition,
+> Functional programming decomposes a problem into a set of functions. Ideally, functions only take inputs and produce outputs, and don't have any internal state that affects the output produced for a given input.
+
+**Functional style discourages functions with side effect that modify internal state or make other changes that aren't visible in the function's return value.** --> **purely function**
+There are theoretical and practical advantages to the functional style:
+- Formal provability
+- Modularity
+- Composability
+- Ease of debugging and testing
+
+### Iterator
+Iterator represent a stream of data; it returns the data one element at a time. Iterators can be materilized by list comprehension.
+Generator expressions:
+`(expression for expr in sequence1
+              if condition1
+             for expr2 in sequence2
+              if condition2...)`
+Generator expressions always have to be written inside parentheses. Note the sequence do not have to be the same length, because they iterated over left to right, not parallel.
+
+### Generators
+Generators are a special class of functions that simplify the task of writing iterators. Generators can be thought of as **resumabe function**--> local vairable won't die.
+
+    def generate_ints(N):
+      for i in range(N):
+        yield i
+Values can be sent into generators by calling its `send(value)` method. Generators also become **coroutines**, a more generalized form of subroutines. Coroutines can be entered, exited, and resumed at many different points.
