@@ -2,7 +2,7 @@
 author : Aperjump
 email : wangwei_aperion@163.com
 """
-from introspect import *
+from inspect import *
 """
 from inspect import signature
 ## Seems to available only in 3.X

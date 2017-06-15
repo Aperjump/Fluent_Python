@@ -40,3 +40,4 @@ For each additional type to receive special treatment, register a new function.
 > A notable quality of the `singledispatch` mechanism is that you can register sepcialized functions anywhere in the system, in any module. If you later add a module with a new user-defined type, you can easily provide a new custom function to handle the type.
 
 ## Parameterized Decorators
+**make a decorator factory that take arguments and return a decorator**
