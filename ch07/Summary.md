@@ -41,3 +41,4 @@ For each additional type to receive special treatment, register a new function.
 
 ## Parameterized Decorators
 **make a decorator factory that take arguments and return a decorator**
+Hignly recommend [blog](http:/github.com/GrahamDumpleton/wrapt/tree/develop/blog)
