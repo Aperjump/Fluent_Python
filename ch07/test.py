@@ -5,12 +5,12 @@
 import time
 import functools
 
-def clock(func):
-    @functools.wraps(func)
+def clock(func):    
     """
     functools.wraps here is used to transform __name__ and __doc__ of the
     decorated functions
     """
+    @functools.wraps(func)
     def clocked(*args, **kwargs):
         t0 = time.time()
         result = func(*args, **kwargs)
