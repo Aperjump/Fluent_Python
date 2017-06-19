@@ -1,4 +1,4 @@
-## Inheritance: For Good or For Worse
+## Ch12 Inheritance: For Good or For Worse
 This chapter talks about two main issues:
 - The pitfalls of subclassing from built-in types
 - Multiple inheritance and the method resolution order
