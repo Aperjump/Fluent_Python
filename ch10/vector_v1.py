@@ -8,7 +8,13 @@ class Vector:
         self._components = arrary(self.typecode, component)
     def __iter__(self):
         return iter(self._components)
+    ## sliceable sequence
+    def __len__(self):
+        return len(self._components)
+    def __gettime__(self, index):
+        return self._components[index]
     def __repr__(self):
+        ## get a limited-length of `self._components`
         components = reprlib.repr(self._components)
         components = components[components.find('['):-1]
         return 'Vector({})'.format(components)
