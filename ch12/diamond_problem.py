@@ -1,4 +1,5 @@
-class A:
+## Adjust for object
+class A(object):
     def ping(self):
         print('A ping: ', self)
 
@@ -12,18 +13,20 @@ class C(A):
 
 class D(B,C):
     def ping(self):
-        super().ping()
+        super(D,self).ping()
         print('post-ping: ', self)
 
     def pingpong(self):
         self.ping()
-        super().ping()
+        super(D, self).ping()
         self.pong()
-        super().pong()
+        super(D, self).pong()
         C.pong(self)
 def main():
     d = D()
     d.pong()
     C.pong(d)
+    d.pingpong()
 if __name__ == "__main__":
+    ## D.__mro__
     main()
