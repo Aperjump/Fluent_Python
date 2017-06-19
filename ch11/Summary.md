@@ -22,4 +22,12 @@ This book class have `read` and `__iter__` method, meaning that it can be treate
 This is a exmaple of **monkey patching**: changing a class or module at runtime, without touching the source code. Monkey patching is powerful, but the code that does the actual patching is very tightly coupled with program to be patched, often handling private and undocumented part.
 
 ### ABCs in Standard Library
-Most ABCs are defined in `collections.abc` module. 
+Most ABCs are defined in `collections.abc` module.
+You can find a ABC exaple in `Tombala.py'. And the best way to declare an ABC is to subclass `abc.ABC`. But this is new in Python 3.4.
+In Python 3+, you can write:
+
+    class Tombola(metaclass = abc.ABCMeta):
+In Python 2.7:
+
+    class Tombola(object):
+        __metaclass__ = abc.ABCMeta
