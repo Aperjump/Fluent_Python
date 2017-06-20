@@ -32,12 +32,27 @@ A Pythonic implementation of the same functionality uses a generator function to
 Any Python function that has the `yield` keyword in its body is a generator function, which when called, returns a generator object. See `Sentence_gen.py`.
 A generator function builds a generator object that wraps the body of the function. When we invoke `next(...)` on the generator object, execution advances to the next `yield` in the function body. Finally, when the function body returns, the enclosing generator object raises `StopIteration`, in accordance with the `Iterator` protocol.
 
-def gen_AB():
-    print('start')
-    yield 'A'
-    print('continue')
-    yield 'B'
-    print('end')
+    def gen_AB():
+        print('start')
+        yield 'A'
+        print('continue')
+        yield 'B'
+        print('end')
 
-for c in gen_AB():
-    print('-->', C)
+    for C in gen_AB():
+        print('-->', C)
+
+### 4. A Gnerator Expression
+A generator expression can be understood as a lazy version of a list comprehension : it does not eagerly build a list, but return a generator that will lazily produce the items on demand. **A generator expression is a factory of generators.** See `gen_AB.py`. Only when the for loop iterates over `res`, the body of `gen_AB` actually executes. Each iteration of the for loop implicitly calls `next(res)`, advancing `gen_AB` to the next yield.
+
+#### Arithmetic Progression generator
+See `ArithmeticProgression.py` example. Here we talk about Generator Functions in Standard library.
+
+In `itertools`:
+- Filtering generator Functions : see example `filter.py`
+- Mapping generator functions
+- Merge Functions
+- Expand Functions
+- Rearranging Functions
+- Built-in Functions
+The material in this part can be found in Python language reference, so there is no need to repeat here.
