@@ -38,3 +38,10 @@ Study examples in `mirror.py`
 ### 2. `contextlib` library
 `@contextmanager` decorator use `yield` to split the body of function into two parts: before `yield`, code will be executed when interpreter calls `__enter__`; the code after `yield` will run `__exit__` at the end of block.
 You can find example code in `List15.5.py`.
+The `__enter__` method:
+- Invokes the generator function and holds on to the generator object -- `gen`
+- Calls `next(gen)` to make it run to the `yield` keyword
+- Returns the value yielded by `next(gen)`, so it can be bound to a target variable in the `with/as` form
+
+When the `with` block terminates, the `__exit__` method:
+- 
