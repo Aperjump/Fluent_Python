@@ -44,4 +44,5 @@ The `__enter__` method:
 - Returns the value yielded by `next(gen)`, so it can be bound to a target variable in the `with/as` form
 
 When the `with` block terminates, the `__exit__` method:
-- 
+- Checks an exception was passed as `exc_type`; if so, `gen.throw(exception)` is invoked, causing the exception to be raised in the `yield` line inside the generator function body
+- Otherwise `next(gen)` is called, resuming the execution of the generator function body after the `yield`
